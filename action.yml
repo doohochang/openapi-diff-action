@@ -9,7 +9,7 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'docker://openapitools/openapi-diff:2.0.1'
+  image: 'Dockerfile'
   args:
     - ${{ inputs.base-spec }}
     - ${{ inputs.head-spec }}
