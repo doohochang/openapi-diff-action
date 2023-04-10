@@ -1,0 +1,15 @@
+name: 'OpenAPI Diff'
+description: 'Generates diff between two OpenAPI spec.'
+inputs:
+  head-spec:
+    description: 'The file path of the head spec.'
+    required: true
+  base-spec:
+    description: 'The file path of the base spec.'
+    required: true
+runs:
+  using: 'docker'
+  image: 'docker://openapitools/openapi-diff:2.0.1'
+  args:
+    - ${{ inputs.base-spec }}
+    - ${{ inputs.head-spec }}
