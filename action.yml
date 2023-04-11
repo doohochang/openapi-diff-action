@@ -7,9 +7,14 @@ inputs:
   base-spec:
     description: 'The file path of the base spec.'
     required: true
+  fail-on-incompatible:
+    description: "If 'true', the action fails when there's more than zero incompatible changes."
+    default: 'true'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
     - ${{ inputs.base-spec }}
     - ${{ inputs.head-spec }}
+    - ${{ inputs.fail-on-incompatible }}

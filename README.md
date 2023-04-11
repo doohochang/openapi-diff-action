@@ -1,9 +1,11 @@
 # OpenAPI Diff Action
 Summarizes the difference between the head and base OpenAPI specs.
+This action uses [OpenAPITools/openapi-diff](https://github.com/OpenAPITools/openapi-diff)
 
 ## Inputs
 * `head-spec`: The path of the head(new) OpenAPI spec file.
 * `base-spec`: The path of the base(old) OpenAPI spec file.
+* `fail-on-incompatible`: If 'true', the action fails on backward-incompatible changes.
 
 ## Example
 ```
