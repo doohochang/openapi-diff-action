@@ -10,7 +10,7 @@ cat summary.md >> $GITHUB_STEP_SUMMARY
 FAIL_ON_INCOMPATIBLE=$3
 if [ $FAIL_ON_INCOMPATIBLE = "true" ] && [ $STATUS != 0 ]
 then
-    echo "API changes broke backward compatibility."
+    echo "::error::API changes broke backward compatibility."
     echo "**API changes broke backward compatibility.**" >> $GITHUB_STEP_SUMMARY
     exit 1
 fi
