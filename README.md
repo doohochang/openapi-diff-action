@@ -23,7 +23,7 @@ jobs:
         with:
           path: 'base'
 
-      - uses: doohochang/openapi-diff-action@v0.1.0
+      - uses: doohochang/openapi-diff-action@v0.1.2
         with:
           head-spec: 'head/schema/openapi.yml'
           base-spec: 'base/schema/openapi.yml'
